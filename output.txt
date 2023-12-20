@@ -1,0 +1,54 @@
+Normalized Relations in form (4NF):
+
+Student
+   StudentID FirstName  LastName
+0        101      John       Doe
+2        102      Jane       Roe
+4        103   Arindam    Khanda
+5        104      Jose  Franklin
+6        105       Ada  Lovelace
+Key: ['StudentID']
+Functional Dependencies:
+StudentID -> FirstName, LastName
+
+ClassRoomDetails
+    Course  Professor classRoom
+0  Math101   Dr.Smith        M1
+1    CS101   Dr.Jones        C1
+3    CS101   Dr.Smith        C2
+5   Bio101  Dr.Watson        B1
+Key: ['Course', 'Professor']
+Functional Dependencies:
+Course, Professor -> classRoom
+
+CourseDetails
+    Course CourseStart  CourseEnd
+0  Math101    1/1/2023  5/30/2023
+1    CS101    2/1/2023  6/15/2023
+5   Bio101    3/1/2023  7/20/2023
+Key: ['Course']
+Functional Dependencies:
+Course -> CourseStart, CourseEnd
+
+ProfessorDetails
+   Professor  ProfessorEmail
+0   Dr.Smith   smith@mst.edu
+1   Dr.Jones   jones@mst.edu
+5  Dr.Watson  watson@mst.edu
+Key: ['Professor']
+Functional Dependencies:
+Professor -> ProfessorEmail
+
+Enrollment
+   StudentID   Course  Professor
+0        101  Math101   Dr.Smith
+1        101    CS101   Dr.Jones
+2        102  Math101   Dr.Smith
+3        102    CS101   Dr.Smith
+4        103    CS101   Dr.Jones
+5        104   Bio101  Dr.Watson
+6        105    CS101   Dr.Jones
+Key: ['StudentID', 'Course']
+Functional Dependencies:
+
+Highest Normal Form of input table: 1NF

@@ -1,0 +1,5 @@
+Course ->> Professor
+Course ->> classroom
+StudentID ->> Course
+StudentID ->> Professor
+exit
